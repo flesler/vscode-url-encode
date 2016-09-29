@@ -1,0 +1,77 @@
+{
+	"name": "url-encode",
+	"displayName": "URL Encode",
+	"description": "Adds commands to URL-encode and URL-decode text",
+	"version": "1.0.0",
+	"publisher": "flesler",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"icon": "icon.png",
+	"homepage": "https://github.com/flesler/vscode-url-encode/blob/master/README.md",
+	"repository": "https://github.com/flesler/vscode-url-encode",
+	"license": "https://github.com/flesler/vscode-url-encode/blob/master/LICENSE.md",
+	"bugs": "https://github.com/flesler/vscode-url-encode/issues",
+	"keywords": [
+		"url",
+		"uri",
+		"encode",
+		"decode",
+		"component"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:url-encode.encodeURL",
+		"onCommand:url-encode.decodeURL"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "url-encode.encodeURL",
+				"title": "URL-Encode selection(s)"
+			},
+			{
+				"command": "url-encode.decodeURL",
+				"title": "URL-Decode selection(s)"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "url-encode config",
+			"properties": {
+				"url-encode.encodeWhitespace": {
+					"type": "boolean",
+					"default": false,
+					"description": "If false new lines, carriage returns and tabs will be preserved when encoding"
+				}
+			}
+		}
+	},
+	"menus": {
+		"editor/context": [
+			{
+				"command": "url-encode.encodeURL",
+				"title": "URL-Encode selection(s)",
+				"group": "url-encode"
+			},
+			{
+				"command": "url-encode.decodeURL",
+				"title": "URL-Decode selection(s)",
+				"group": "url-encode"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "mocha"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.32",
+		"@types/node": "^6.0.40",
+		"mocha": "^2.3.3",
+		"vscode": "^1.0.0"
+	}
+}
