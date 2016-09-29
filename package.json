@@ -1,7 +1,7 @@
 {
 	"name": "url-encode",
 	"displayName": "URL Encode",
-	"description": "Adds commands to URL-encode and URL-decode text",
+	"description": "Allows URL-Encoding and URL-Decoding text, supports multiple selections and whole file if none",
 	"version": "1.0.1",
 	"publisher": "flesler",
 	"engines": {
