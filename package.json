@@ -2,7 +2,7 @@
 	"name": "url-encode",
 	"displayName": "URL Encode",
 	"description": "Adds commands to URL-encode and URL-decode text",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "flesler",
 	"engines": {
 		"vscode": "^1.5.0"
