@@ -29,6 +29,8 @@ If you have any idea, feel free to create issues and pull requests
 
 ## Release Notes
 
-### 1.0.0
+### 1.1.0
+* Added commands to editor's context menu
 
+### 1.0.0
 * First release

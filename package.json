@@ -2,7 +2,7 @@
 	"name": "url-encode",
 	"displayName": "URL Encode",
 	"description": "Allows URL-Encoding and URL-Decoding text, supports multiple selections and whole file if none",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"publisher": "flesler",
 	"engines": {
 		"vscode": "^1.5.0"
@@ -31,13 +31,25 @@
 		"commands": [
 			{
 				"command": "url-encode.encodeURL",
-				"title": "URL-Encode selection(s)"
+				"title": "URL-Encode selected text"
 			},
 			{
 				"command": "url-encode.decodeURL",
-				"title": "URL-Decode selection(s)"
+				"title": "URL-Decode selected text"
 			}
 		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "url-encode.encodeURL",
+					"group": "1_modification"
+				},
+				{
+					"command": "url-encode.decodeURL",
+					"group": "1_modification"
+				}
+			]
+		},
 		"configuration": {
 			"type": "object",
 			"title": "url-encode config",
@@ -49,20 +61,6 @@
 				}
 			}
 		}
-	},
-	"menus": {
-		"editor/context": [
-			{
-				"command": "url-encode.encodeURL",
-				"title": "URL-Encode selection(s)",
-				"group": "url-encode"
-			},
-			{
-				"command": "url-encode.decodeURL",
-				"title": "URL-Decode selection(s)",
-				"group": "url-encode"
-			}
-		]
 	},
 	"scripts": {
 		"postinstall": "node ./node_modules/vscode/bin/install",
