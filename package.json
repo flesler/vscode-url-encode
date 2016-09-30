@@ -42,11 +42,13 @@
 			"editor/context": [
 				{
 					"command": "url-encode.encodeURL",
-					"group": "1_modification"
+					"group": "1_modification",
+					"when": "editorTextFocus"
 				},
 				{
 					"command": "url-encode.decodeURL",
-					"group": "1_modification"
+					"group": "1_modification",
+					"when": "editorTextFocus"
 				}
 			]
 		},
